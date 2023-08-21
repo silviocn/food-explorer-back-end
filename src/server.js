@@ -21,5 +21,5 @@ app.use((error, request, response, next) => {
   return response.status(500).json({status: "error", message: "Internal server error"});
 });
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3333; // telling which port to use, use 3333 if doesn't found 
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));

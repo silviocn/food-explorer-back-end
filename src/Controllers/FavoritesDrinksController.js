@@ -3,7 +3,6 @@ const knex = require("../database/knex")
 class favoritesDrinksController {
   async create(request, response) {
     const { drink_id } = request.body
-    //const { user_id } = request.params
     const user_id = request.user.id
     await knex("favoritesDrinks").insert({ drink_id, user_id })
     response.json()
@@ -22,7 +21,6 @@ class favoritesDrinksController {
     return response.json({ favoriteDrink })
   }
   async index(request, response) {
-    //const { user_id } = request.query
     const user_id = request.user.id
     const favoritesDrinks = await knex("favoritesDrinks").where({ user_id }).select(["drinks.id", "drinks.name", "drinks.image", "drinks.price", "drinks.description"]).innerJoin("drinks", "drinks.id", "favoritesDrinks.drink_id").orderBy("drinks.name")
     return response.json({ favoritesDrinks })

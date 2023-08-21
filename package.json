@@ -1,7 +1,7 @@
 {
-  "name": "atividade-projeto-final---explorer-food",
+  "name": "food-explorer-final-project-by-silviocn",
   "version": "1.0.0",
-  "description": "Parte back-end do aplicativo Explorer Food",
+  "description": "back-end-of-food-explorer-final-project-by-silviocn",
   "main": "index.js",
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
