@@ -9,11 +9,11 @@ class AllRequestsController {
     return response.json()
   }
 
-  /*async delete(request, response) {
+  async delete(request, response) {
     const { id } = request.params
     await knex("allRequests").where({ id }).delete()
     return response.json()
-  }*/
+  }
 
   async show(request, response) {
     const user_id = request.user.id
