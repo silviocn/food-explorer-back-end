@@ -12,11 +12,11 @@ class SearchController {
     const search = await knex("search").where({ id }).first()
     return response.json({ search })
   }
-  async delete(request, response) {
+  /*async delete(request, response) {
     const { id } = request.params
     await knex("search").where({ id }).delete()
     return response.json()
-  }
+  }*/
   async index(request, response) {
     const { search } = request.query
     const user_id = request.user.id

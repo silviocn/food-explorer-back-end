@@ -8,12 +8,12 @@ class favoritesDrinksController {
     response.json()
   }
 
-  async delete(request, response) {
+  /*async delete(request, response) {
     const { id } = request.params
     const user_id = request.user.id
     await knex("favoritesDrinks").where({ drink_id: id }).where({ user_id }).delete()
     return response.json()
-  }
+  }*/
   async show(request, response) {
     const { id } = request.params
     const user_id = request.user.id

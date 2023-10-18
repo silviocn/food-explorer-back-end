@@ -27,11 +27,11 @@ class DrinksController {
     const ingredients = await knex("ingredientsDrinks").where({ drink_id: id }).orderBy("name")
     return response.json({ ...drinks, ingredients })
   }
-  async delete(request, response) {
+  /*async delete(request, response) {
     const { id } = request.params
     await knex("drinks").where({ id }).delete()
     return response.json()
-  }
+  }*/
   async index(request, response) {
     const { name } = request.query
     const drinks = await knex("drinks").whereLike("name", `%${name}%`).orderBy("name")

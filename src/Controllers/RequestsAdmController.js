@@ -16,11 +16,11 @@ class RequestsAdmController {
     return response.json(requests)
   }
 
-  async delete(request, response) {
+  /*async delete(request, response) {
     const { id } = request.params
     await knex("allRequests").where({ id }).delete()
     return response.json()
-  }
+  }*/
 
   async index(request, response) {
     const allRequestsUsers = await knex("allRequests")

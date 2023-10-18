@@ -12,10 +12,10 @@ class RequestController {
     const requests = await knex("requests").where({ id }).first()
     return response.json({ ...requests })
   }
-  async delete(request, response) {
+  /*async delete(request, response) {
     await knex("requests").delete()
     return response.json()
-  }
+  }*/
   async index(request, response) {
     const user_id = request.user.id
     const requests = await knex("requests").where({ user_id }).orderBy("name")
