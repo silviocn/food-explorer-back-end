@@ -9,7 +9,7 @@ const upload = multer(uploadConfig.MULTER)
 dishesRoutes.post("/", upload.single("image"), dishesController.create)
 dishesRoutes.get("/:id", dishesController.show)
 dishesRoutes.get("/", dishesController.index)
-dishesRoutes.delete("/:id", dishesController.delete)
+//dishesRoutes.delete("/:id", dishesController.delete)
 dishesRoutes.put("/:id", dishesController.update) // adicionado
 
 module.exports = dishesRoutes
