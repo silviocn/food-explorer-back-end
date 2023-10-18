@@ -30,10 +30,27 @@ class DishesController {
     await knex("dishes").where({ id }).delete()
     return response.json()
   }
+
   async index(request, response) {
     const { name } = request.query
     const dishes = await knex("dishes").whereLike("name", `%${name}%`).orderBy("name")
     return response.json({ dishes })
+  }
+
+  async update(request, response) { // adicionado
+    const { id } = request.params
+    const dish = await knex("dishes").where({ id }).first()
+    const ingredients = await knex("ingredientsDishes").where({ dish_id: id }).orderBy("name")
+    
+    const formData = new FormData()
+    formData.append("name", name)
+    formData.append("description", description)
+    formData.append("price", price)
+    formData.append("ingredients", ingredients)
+    formData.append("image", file)
+    await api.post("/dishes", formData).then(() => { alert("Item successfully updated"); navigate("/adm") }).catch(error => { if (error.response) { alert(error.response.data.message) } else { alert("Unable to register") } })
+    
+    return response.json({ ...dish, ingredients })
   }
 
 }
