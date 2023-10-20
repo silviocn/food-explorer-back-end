@@ -10,11 +10,12 @@
 ## Here you can find the front-end deployed: https://food-explorer-by-silviocn.netlify.app/
 
 ## When creating the insomnia document, use the link below to "POST" (Create) a new administrator user directly in the application, as the back end is already running online. You should write the data like this example on JSON format to make it work.
-## Back-end URL for new adm user: https://food-explorer-back-end-by-silviocn.onrender.com/adm
+
 ## Example of data: {
 ##	"name": "Administrator",
 ## 	"email": "administrator@email.com",
 ##	"password": "654321"
 ## }
+## Back-end URL for new adm user: https://food-explorer-back-end-by-silviocn.onrender.com/adm
 
 ## Or just use administrador@email.com and password 123456 to log in as administrator

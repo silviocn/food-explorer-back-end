@@ -37,7 +37,7 @@ class DishesController {
     return response.json({ dishes })
   }
 
-  async update(request, response) { // adicionado
+  async update(request, response) {
     const { id } = request.params
     const dish = await knex("dishes").where({ id }).first()
     const ingredients = await knex("ingredientsDishes").where({ dish_id: id }).orderBy("name")
