@@ -1,5 +1,5 @@
 # ✅ FOOD EXPLORER ✅
-## food explorer app: back-end (to access front end, please go to: https://github.com/silviocn/food-explorer-front-end)
+## food explorer app: back-end (to access front end, please go to: https://food-explorer-by-silviocn.netlify.app/)
 ## Status: Completed
 
 ## Project done as part of final evaluation of Explorer course, from Rocketseat School.
